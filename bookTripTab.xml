@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="BookTripTab Suite" parallel="tests" thread-count="2">
+ <test name="Chrome Test">
+  <parameter name="browser" value="chrome" />
+  <parameter name="url" value="https://www.delta.com" />
+  <parameter name ="stateWantedFrom" value="California" />
+  <parameter name ="airportWantedFrom" value="SFO" />
+   <parameter name ="countryWantedTo" value="India" />
+  <parameter name ="airportWantedTo" value="BOM" />
+  <parameter name ="daysFromCurrentDate" value="14" />
+    <classes>
+      <class name="test.BookTripTab_Test" />
+    </classes>
+  </test>
+   
+<test name="BookTripTab Firefox Test">
+  <parameter name="browser" value="firefox" />
+  <parameter name="url" value="https://www.delta.com" />
+  <parameter name ="stateWantedFrom" value="California" />
+  <parameter name ="airportWantedFrom" value="SFO" />
+  <parameter name ="countryWantedTo" value="India" />
+  <parameter name ="airportWantedTo" value="BOM" />
+  <parameter name ="daysFromCurrentDate" value="20" />
+    <classes>
+      <class name="test.BookTripTab_Test" />
+    </classes>
+  </test>
+</suite>
